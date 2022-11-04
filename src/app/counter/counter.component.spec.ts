@@ -64,4 +64,28 @@ describe('CounterComponent', () => {
     const plusBtn = fixture.nativeElement.querySelector('[data-test="plusBtn"]');
     expect(plusBtn).toBeFalsy();
   });
+
+  it('should backgroud green when count number is less than 0', () => {
+    // given
+    component.count = -1;
+    // when
+    fixture.detectChanges();
+    // then
+    const minusBtn = fixture.nativeElement.querySelector('[data-test="minusBtn"]');
+    expect(minusBtn).toBeFalsy();
+  });
+
+  it('should return false when count number less than 0', () => {
+    // given
+    component.count = -1;
+    // when
+    expect(component.isLagerOrEqualThanZero()).toBeFalse();
+  });
+
+  it('should return true when count number less than 0', () => {
+    // given
+    component.count = 1;
+    // when
+    expect(component.isLagerOrEqualThanZero()).toBeTrue();
+  });
 });
