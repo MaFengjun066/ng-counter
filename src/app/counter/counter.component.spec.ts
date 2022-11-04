@@ -102,4 +102,15 @@ describe('CounterComponent', () => {
     // when
     expect(component.isLessThan10()).toBeFalse();
   });
+
+  it('should reset count number to 0', () => {
+    // given
+    component.count = 5;
+    // when
+    component.reset();
+    fixture.detectChanges();
+    // then
+    const displayCount = fixture.nativeElement.querySelector('[data-test="displayCount"]');
+    expect(displayCount.textContent).toEqual('number: 0');
+  });
 });
