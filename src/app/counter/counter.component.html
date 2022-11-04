@@ -1,5 +1,5 @@
 <p>counter works!</p>
-<button data-test="plusBtn" *ngIf="isLessThan10()" (click)="increase()">+</button>
+<button data-test="plusBtn" *ngIf="isLessThan10()" (click)="increase()" nz-button nzType="primary">+</button>
 <span data-test="displayCount" [ngClass]="{'green':!isLagerOrEqualThanZero()}" [ngClass]="{'red':!isLessThan10()}">number: {{counter.count}}</span>
-<button data-test="minusBtn" *ngIf="isLagerOrEqualThanZero()" (click)="descrease()">-</button>
-<button (click)="reset()">reset</button>
+<button data-test="minusBtn" *ngIf="isLagerOrEqualThanZero()" (click)="descrease()" nz-button nzType="primary">-</button>
+<button (click)="reset()" nz-button nzType="dashed">reset</button>
