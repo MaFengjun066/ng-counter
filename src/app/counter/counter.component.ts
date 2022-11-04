@@ -20,4 +20,8 @@ export class CounterComponent implements OnInit {
     this.count--;
   }
 
+  isLagerOrEqualThanZero(): boolean{
+    return this.count >= 0;
+  }
+
 }
