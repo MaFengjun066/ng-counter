@@ -1,6 +1,6 @@
 <p>counter-group works!</p>
 <button (click)="doCreateCounter()" nz-button nzType="primary">Create Counter</button>
-<app-counter *ngFor="let counter of counters"></app-counter>
+<app-counter *ngFor="let item of counters" [counter]="item"></app-counter>
 <div><span>-----------------------------------------</span></div>
 <div>
 Sum: {{sumCount()}}    
